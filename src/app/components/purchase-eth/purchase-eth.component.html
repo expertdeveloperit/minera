@@ -1,0 +1,135 @@
+<section class="menu1" id="menu2-k">
+<nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <div class="logo">
+          <a class="navbar-brand text-white nav-padding">SIGNINGMINERS</a>
+        </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav text-white">
+            <li><a class="text-white nav-padding" routerLink="/">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+</section>
+<section class="mbr-section content3" id="content3-1l">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+            	<h1 class="mbr-section-title display-2 text-center">Crypto Payment Methods</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mbr-section content1 article">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="mbr-section-text text1">Due to Limitations with common payment processing systems we are no longer able to accept paypal, or credit card payments. If you need to purchase we recommend you purchase any crypto with your credit card and then use those coins to purchase from us via our secure coinpayments system.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mbr-section buttons1">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="text-xs-center text-center">
+                    <form id="SubmitMe" action="https://www.coinpayments.net/index.php" method="post">
+                    <input type="hidden" name="cmd" value="_pay">
+                    <input type="hidden" name="reset" value="1">
+                    <input type="hidden" name="merchant" value="990175e6164548f13d95a21efbab9f7c">
+                    <input type="hidden" name="item_name" value="ETH HashPower">
+                    <input type="hidden" name="currency" value="USD">
+                    <input type="hidden" name="amountf" value="200.00000000">
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="hidden" name="allow_quantity" value="1">
+                    <input type="hidden" name="want_shipping" value="0">
+                    <input type="hidden" name="taxf" value="12.00000000">
+                    <input type="hidden" name="success_url" value="http://signingminers.com/Success.html">
+                    <input type="hidden" name="cancel_url" value="http://signingminers.com/Failed.html">
+                    <input type="hidden" name="allow_extra" value="0">
+                    <input type="image" (click)="submitMe()" src="../../../assets/images/CP-third-med.png" alt="Buy Now with CoinPayments.net">
+                   <!--  <a class="cart-img">
+                        <img src="../../../assets/images/CP-third-med.png">
+                    </a> -->
+                </form>
+                	
+				</div> 
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mbr-section content3" id="content3-1p">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+            	<h1 class="mbr-section-title display-2 text-center transform">Wire Transfer Methods</h1>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mbr-section form3" id="form3-12" data-rv-view="23" style="">
+        <div class="container" id="contact-sec">
+            <div class="row heading-bottom">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <h1 class="mbr-section-title">Wire Transfer Information:</h1>
+                    <p class="mbr-section-subtitle text-1 ptextsize question-space">Customers may also contact us and request an invoice with wire transfer information via the following form.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col-xs-12 form">  
+
+                <div class="row" data-form-type="formoid">
+                    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" ngNativeValidate id="contact_form">
+                        <div class="col-xs-12 col-md-8 col-md-offset-2 form-wrap">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" #name placeholder="Name*" required ngModel>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <input type="email" #email class="form-control" name="email" placeholder="Email*" required ngModel>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" #phone name="phone" placeholder="Phone" minlength="10" maxlength="10" pattern="[0-9]*" required ngModel>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12">
+                                <textarea class="form-control" name="message" #message rows="7" placeholder="Message" required ngModel></textarea>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="form-separator"></div>
+                        <div class="col-xs-12 col-md-8 col-md-offset-2 form-button-wrap">   
+                            <div class="button-block text-center">
+                                <button type="submit" class="btn btn-lg btn-info"><span class="btn-text">Send message</span><i class="btn-loader"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</section>
+<footer class="purchase footer4" id="footer4-d">
+    <div class="container">
+        <p class="text-center">Copyright (c) 2017 Signing Miners LLC.</p>
+    </div>
+</footer>

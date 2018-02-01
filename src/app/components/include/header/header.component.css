@@ -1,0 +1,36 @@
+
+.navbar-default.sidebar  ul > li:hover > a{
+    text-decoration: none;
+    background-color: #eee;
+}
+
+
+.navbar-default.sidebar ul li a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+ a:hover {
+    color: #23527c;
+    text-decoration: none;
+}
+.sidebar .active>a>.fa.arrow:before {
+    content: "\f107";
+}
+.active>a>.fa.arrow:before {
+    content: "\f107";
+}
+.sidebar .fa.arrow:before {
+    content: "\f104";
+}
+.fa.arrow:before {
+    content: "\f104";
+}
+.nav-second-level li a {
+    padding-left: 37px !important;
+}
+.sidebar .nav-second-level .nav-third-level li a {
+    padding-left: 52px!important;
+}
+

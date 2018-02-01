@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <ngx-loading [show]="loading" [config]=""></ngx-loading>
+        <div class="row ">
+            <div class="col-lg-12">
+                <h1 class="page-header">View Orders:</h1>
+            </div>  
+        <!-- /.col-lg-12 -->
+        </div>
+    <!-- /.row -->
+        <div class="row ">
+            <div class="row show-grid">
+                <div class="col-xs-6">Number of Orders : </div>
+                <div class="col-xs-6">{{orderInfo.length}}</div>
+
+            </div>
+        </div>
+
+        <!-- Data Table Information -->
+    <div class="row">
+        <div class="col-xs-12 no_padding">
+            <div class="panel panel-default">
+            <div class="panel-heading">Customers</div>
+            <div class="panel panel-default table-space">
+            <table id="orderTable" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Invoice #</th>
+                            <th>Start Date</th>
+                            <th>Cost</th>
+                            <th>Estimated Daily</th>
+                            <th>Estimated Monthly</th>
+                            <th>Estimated Yearly</th>
+                            <th>UserID</th>
+                            <th>HashPower</th>
+                            <th>Transaction Type</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+
+                    </tfoot>
+                    <tbody>
+                        <tr *ngFor="let info of orderInfo; let last = last">
+                            <td>{{info.invoicenumber}}</td>
+                            <td>{{info.startdate}}</td>
+                            <td>{{info.cost}}</td>
+                            <td>{{info.estimatedday}}</td>
+                            <td>{{info.estimatedmo}}</td>
+                            <td>{{info.estimatedyr}}</td>
+                            <td>{{info.userid}}</td>
+                            <td>{{info.hashpower}}</td>
+                            <td>{{info.paymenttype}}</td>
+                            <span *ngIf="last">{{refreshDatatable()}}</span>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- second Table -->
+
+</div>

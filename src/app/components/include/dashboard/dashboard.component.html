@@ -1,0 +1,402 @@
+<div class="container-fluid">
+    <!-- /.row -->
+    <br>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 ng-isolate-scope" number="0.00000000" hashrate="1" address="test" price="$100.00" comments="BITCOIN" colour="primary" type="cloud" contracts="1" earnings="$150.00" goto="btc">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-cloud fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge text-font">0.00000000</div>
+                    <div class="text-font">Bitcoin</div>
+                </div>
+            </div>
+        </div>
+        <a [routerLink]="['/orders','btc']">
+            <div class="panel-footer">
+                <span class="pull-left text-font">{{colocates['btc']['contracts'].length}} Orders</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">BTC Hashrate</span>
+            <span class="pull-right text-font">{{btcHashPower}} TH/s</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">BTC Price</span>
+            <span class="pull-right text-font">${{priceInfo}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">USD Earnings</span>
+            <span class="pull-right text-font">${{USDEarning('btc',false)}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left text-font">{{dashBoardInfo.btcaddress}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+    </div>
+</div>
+        <div class="col-lg-3 col-md-6 ng-isolate-scope" number="0.00000000" hashrate="1" address="test" price="$100.00" comments="Litecoin" colour="yellow" type="cloud" contracts="1" earnings="$150.00" goto="orders.html">
+    <div class="panel panel-yellow">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-cloud fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge text-font">0.00000000</div>
+                    <div class="text-font"> Litecoin</div>
+                </div>
+            </div>
+        </div>
+        <a [routerLink]="['/orders','btc']">
+            <div class="panel-footer">
+                <span class="pull-left text-font">{{colocates['ltc']['contracts'].length}} Orders</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">LTC Hashrate</span>
+            <span class="pull-right text-font">{{ltcHashPower}} MH/s</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">LTC Price</span>
+            <span class="pull-right text-font">${{priceLtc}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">USD Earnings</span>
+            <span class="pull-right text-font">${{USDEarning('ltc',false)}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left text-font">{{dashBoardInfo.ltcaddress}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+
+    </div>
+</div>
+        <div class="col-lg-3 col-md-6 ng-isolate-scope" number="0.00000000" hashrate="1" address="test" price="$100.00" comments="Dashcoion" colour="green" type="cloud" contracts="1" earnings="$150.00" goto="orders.html">
+    <div class="panel panel-green">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-cloud fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge text-font">0.00000000</div>
+                    <div class="text-font">Dashcoin</div>
+                </div>
+            </div>
+        </div>
+        <a [routerLink]="['/orders','btc']">
+            <div class="panel-footer">
+                <span class="pull-left text-font">{{colocates['dash']['contracts'].length}} Orders</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">DASH Hashrate</span>
+            <span class="pull-right text-font">{{DashHashPower}} MH/s</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">DASH Price</span>
+            <span class="pull-right text-font">${{priceDash}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">USD Earnings</span>
+            <span class="pull-right text-font"> ${{USDEarning('dash',false)}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left text-font">{{dashBoardInfo.dashaddress}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+    </div>
+</div>
+        <div class="col-lg-3 col-md-6 ng-isolate-scope" number="0.00000000" hashrate="1" address="test" price="$100.00" comments="Ethereum" colour="red" type="cloud" contracts="1" earnings="$150.00" goto="orders.html">
+    <div class="panel panel-red">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-cloud fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge text-font">0.00000000</div>
+                    <div class="text-font">Ethereum</div>
+                </div>
+            </div>
+        </div>
+        <a [routerLink]="['/orders','btc']">
+            <div class="panel-footer">
+                <span class="pull-left text-font">{{colocates['eth']['contracts'].length}} Orders</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">ETH Hashrate</span>
+            <span class="pull-right text-font">{{EthHashPower}} MH/s</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">ETH Price</span>
+            <span class="pull-right text-font">${{priceEth}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">USD Earnings</span>
+            <span class="pull-right text-font">${{USDEarning('dash',false)}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left text-font">{{dashBoardInfo.ethaddress}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+    </div>
+</div>
+         <div class="col-lg-3 col-md-6 ng-isolate-scope" number="0.00000000" hashrate="1" address="test" price="$100.00" comments="BITCOIN" colour="primary" type="home" contracts="1" earnings="$150.00" goto="btc">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-home fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge text-font">0.00000000</div>
+                    <div class="text-font">Bitcoin</div>
+                </div>
+            </div>
+        </div>
+        <a [routerLink]="['/orders','btc']">
+            <div class="panel-footer">
+                <span class="pull-left text-font">{{colocates['btc']['contracts'].length}} Orders</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">BTC Hashrate</span>
+            <span class="pull-right text-font">{{colocates['btc']['hashrate']}} TH/s</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">BTC Price</span>
+            <span class="pull-right text-font">${{priceInfo}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">USD Earnings</span>
+            <span class="pull-right text-font">${{USDEarning('btc',true)}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left text-font">{{dashBoardInfo.btcaddress}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+    </div>
+</div>
+        <div class="col-lg-3 col-md-6 ng-isolate-scope" number="0.00000000" hashrate="1" address="test" price="$100.00" comments="Litecoin" colour="yellow" type="home" contracts="1" earnings="$150.00" goto="orders.html">
+    <div class="panel panel-yellow">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-home fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge text-font">0.00000000</div>
+                    <div class="text-font"> Litecoin</div>
+                </div>
+            </div>
+        </div>
+        <a [routerLink]="['/orders','btc']">
+            <div class="panel-footer">
+                <span class="pull-left text-font">{{colocates['ltc']['contracts'].length}} Orders</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">LTC Hashrate</span>
+            <span class="pull-right text-font">{{colocates['ltc']['hashrate']}} MH/s</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">LTC Price</span>
+            <span class="pull-right text-font">${{priceLtc}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">USD Earnings</span>
+            <span class="pull-right text-font">${{USDEarning('ltc',true)}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left text-font">{{dashBoardInfo.ltcaddress}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+
+    </div>
+</div>
+        <div class="col-lg-3 col-md-6 ng-isolate-scope" number="0.00000000" hashrate="1" address="test" price="$100.00" comments="Dashcoion" colour="green" type="home" contracts="1" earnings="$150.00" goto="orders.html">
+    <div class="panel panel-green">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-home fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge text-font">0.00000000</div>
+                    <div class="text-font">Dashcoin</div>
+                </div>
+            </div>
+        </div>
+        <a [routerLink]="['/orders','btc']">
+            <div class="panel-footer">
+                <span class="pull-left text-font">{{colocates['dash']['contracts'].length}} Orders</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">DASH Hashrate</span>
+            <span class="pull-right text-font">{{colocates['dash']['hashrate']}} MH/s</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">DASH Price</span>
+            <span class="pull-right text-font">${{priceDash}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">USD Earnings</span>
+            <span class="pull-right text-font"> ${{USDEarning('dash',true)}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left text-font">{{dashBoardInfo.dashaddress}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+    </div>
+</div>
+        <div class="col-lg-3 col-md-6 ng-isolate-scope" number="0.00000000" hashrate="1" address="test" price="$100.00" comments="Ethereum" colour="red" type="cloud" contracts="1" earnings="$150.00" goto="orders.html">
+    <div class="panel panel-red">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-home fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge text-font">0.00000000</div>
+                    <div class="text-font">Ethereum</div>
+                </div>
+            </div>
+        </div>
+        <a [routerLink]="['/orders','btc']">
+            <div class="panel-footer">
+                <span class="pull-left text-font">{{colocates['eth']['contracts'].length}} Orders</span>
+                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                <div class="clearfix"></div>
+            </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">ETH Hashrate</span>
+            <span class="pull-right text-font">{{colocates['eth']['hashrate']}} MH/s</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">ETH Price</span>
+            <span class="pull-right text-font">${{priceEth}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left">USD Earnings</span>
+            <span class="pull-right text-font">${{USDEarning('dash',true)}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+        <a [routerLink]="['/orders','btc']">
+        <div class="panel-footer">
+            <span class="pull-left text-font">{{dashBoardInfo.ethaddress}}</span>
+            <div class="clearfix"></div>
+        </div>
+        </a>
+    </div>
+</div>
+      
+</div>
+</div>            
+    

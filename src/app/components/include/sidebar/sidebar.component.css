@@ -1,0 +1,12 @@
+.purchase {
+    position: absolute;
+    bottom: 0;
+    top: 350px;
+}
+
+.modified-well{
+  border:0;
+  overflow:visible;
+  width:100%;
+  height:100%;
+}

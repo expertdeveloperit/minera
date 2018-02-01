@@ -1,0 +1,37 @@
+.navbar-fixed-top {
+    background: #8acdbc;
+}
+#content3-1l{
+	background-color: rgb(255, 255, 255);
+	 padding-top: 122px; 
+	 padding-bottom: 0px;
+}
+.cart-img{
+	cursor: pointer;
+}
+.buttons1{
+	background-color: rgb(255, 255, 255); 
+	padding-top: 0; 
+	padding-bottom: 20px;
+}
+.display-2 {
+    font-size: 61px;
+    font-weight: 100;
+}
+.text1{
+	font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #4a4a4a;
+    margin-bottom: 0;
+    padding: 1px 27px 0 15px;
+}
+.content3{
+	background-color: rgb(255, 255, 255); 
+	padding-top: 50px; 
+	padding-bottom: 0px;
+}
+.purchase{
+    padding-top: 50px !important;
+    padding-bottom: 45px !important;
+}

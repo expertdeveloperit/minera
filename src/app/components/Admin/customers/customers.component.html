@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <ngx-loading [show]="loading" [config]=""></ngx-loading>
+        <div class="row ">
+            <div class="col-lg-12">
+                <h1 class="page-header">BTC Earnings:</h1>
+            </div>  
+        <!-- /.col-lg-12 -->
+        </div>
+    <!-- /.row -->
+        <div class="row ">
+            <div class="row show-grid">
+                <div class="col-xs-6">Number of Customers : </div>
+                <div class="col-xs-6">{{customerInfo.length}}</div>
+                <div class="col-xs-6">Current BTC Price : </div>
+                <div class="col-xs-6">${{customerPrice}}</div>
+            </div>
+        </div>
+
+        <!-- Data Table Information -->
+    <div class="row">
+        <div class="col-xs-12 no_padding">
+            <div class="panel panel-default">
+            <div class="panel-heading">Customers</div>
+            <div class="panel panel-default table-space">
+            <table id="orderTable" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>UserName</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>BTC Earned</th>
+                            <th>BTC HashPower</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+
+                    </tfoot>
+                    <tbody>
+                        <tr *ngFor="let info of customerInfo; let last = last">
+                            <td>{{info.username}}</td>
+                            <td>{{info.email}}</td>
+                            <td>{{info.phone}}</td>
+                            <td>{{info.btcavailible}}</td>
+                            <td>{{info.btchashpower}}</td>
+                            <span *ngIf="last">{{refreshDatatable()}}</span>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- second Table -->
+
+</div>

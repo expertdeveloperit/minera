@@ -1,0 +1,9 @@
+label {
+    vertical-align: -webkit-baseline-middle;
+    line-height: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+td {
+    font-weight: 600;
+}

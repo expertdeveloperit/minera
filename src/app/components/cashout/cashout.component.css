@@ -1,0 +1,39 @@
+
+.profileInfo .panel-body{
+    margin: 15px 0;
+}
+.profileInfo .form-group {
+    margin-bottom: 15px;
+}
+.btn-block {
+    width: 330px;
+    display: block;
+    margin: auto;
+}
+.btn{
+	height: 45px;
+}
+.btn-register {
+    background-color: #1CB94E;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: #1CB94A;
+}
+.form-control {
+    height: 45px;
+    font-size: 16px;
+}
+.this_center{
+    padding-top: 110px;
+}
+.panel-login {
+    border-color: #ccc;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}

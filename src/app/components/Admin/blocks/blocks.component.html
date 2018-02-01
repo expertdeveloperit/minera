@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <ngx-loading [show]="loading" [config]=""></ngx-loading>
+        <div class="row ">
+            <div class="col-lg-12">
+                <h1 class="page-header">BTC Blocks :</h1>
+            </div>  
+        <!-- /.col-lg-12 -->
+        </div>
+    <!-- /.row -->
+        <div class="row ">
+            <div class="row show-grid">
+                <div class="col-xs-6">Current BTC Price:</div>
+                <div class="col-xs-6">${{blockPrice}}</div>
+            </div>
+        </div>
+
+        <!-- Data Table Information -->
+    <div class="row">
+        <div class="col-xs-12 no_padding">
+            <div class="panel panel-default">
+            <div class="panel-heading">BTC Blocks</div>
+            <div class="panel panel-default table-space">
+            <table id="orderTable" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Block ID</th>
+                            <th>Date Found</th>
+                            <th>Duration</th>
+                            <th>Pool Hashrate PH/s</th>
+                            <th>Reward ( BTC )</th>
+                            <th>Block Value ( BTC )</th>
+                            <th>Transactions Value ( BTC )</th>
+                            <th>Total Value ( BTC )</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+
+                    </tfoot>
+                    <tbody>
+                        <tr *ngFor="let info of blockInfo; let last = last">
+                            <td>{{info.blockid}}</td>
+                            <td>{{info.datefound}}</td>
+                            <td>{{info.miningduration}}</td>
+                            <td>{{info.poolhashrate}}</td>
+                            <td class='bold'>{{info.reward}} BTC / $ {{info.reward*blockPrice}}</td>
+                            <td class='bold'>12.5BTC / ${{12.5*blockPrice}}</td>
+                            <td class='bold'>{{(info.totalreward - 12.5).toFixed(5)}} BTC / $ {{((info.totalreward- 12.5) * blockPrice).toFixed(6)}}</td>                            
+                            <td class='bold'>{{(info.totalreward - 0).toFixed(5)}} BTC / $ {{(info.totalreward * blockPrice).toFixed(5)}}</td>
+                            <span *ngIf="last">{{refreshDatatable()}}</span>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- second Table -->
+
+</div>

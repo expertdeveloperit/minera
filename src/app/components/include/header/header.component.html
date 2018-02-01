@@ -1,0 +1,103 @@
+<nav  id="sidebar" class="navbar navbar-default navbar-static-top" style="margin-bottom: 0;">
+    <div  class="navbar-header">
+        <button  class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+            <span  class="sr-only">Toggle navigation</span>
+            <span  class="icon-bar"></span>
+            <span  class="icon-bar"></span>
+            <span  class="icon-bar"></span>
+        </button>
+        <a  class="navbar-brand">SigningMiners</a>
+    </div>
+    <!-- first ul -->
+            <ul  class="nav navbar-top-links navbar-right">
+        <li  class="dropdown">
+            <a  class="dropdown-toggle" data-toggle="dropdown">
+                <i  class="fa fa-user fa-fw"></i>  <i  class="fa fa-caret-down"></i>
+            </a>
+            <ul  class="dropdown-menu dropdown-user">
+                <li ><a routerLink="/profile" ><i  class="fa fa-user fa-fw"></i> User Profile</a>
+                </li>
+                <li class="divider"></li>
+                <li ><a  routerLink="/login" ui-sref="login" (click)="logout()"><i  class="fa fa-sign-out fa-fw"></i> Logout</a>
+                </li>
+            </ul>       
+        </li> 
+    </ul>
+
+<!-- first ul close -->
+    <div  class="navbar-default sidebar ng-isolate-scope" role="navigation">
+    <div  class="sidebar-nav navbar-collapse">
+        <ul  class="list-unstyled components" id="side-menu">
+            <li  class="active">
+                <a  routerLink="/dashboard" class="active"><i  class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+            </li>
+            <li>
+                <a href="#ordersSubmenu" data-toggle="collapse" aria-expanded="false" class="mainpoint1"><i  class="fa fa-shopping-cart fa-fw"></i> Orders<span  class="fa arrow"></span></a>
+                <ul  class="nav nav-second-level collapse" id="ordersSubmenu">
+                    <li>
+                        <a [routerLink]="['/orders','btc']" >BTC</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/orders','ltc']">LTC</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/orders','eth']">ETH</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/orders','dash']">DASH</a>
+                    </li>
+                </ul> 
+                
+            </li>
+            <li  >
+                <a href="#accountSubmenu" data-toggle="collapse" aria-expanded="false" class="mainpoint2"><i  class="fa fa-user fa-fw"></i> Account<span  class="fa arrow"></span></a>
+                <ul  class="nav nav-second-level collapse" id="accountSubmenu">
+                    <li >
+                        <a  routerLink="/profile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#cashoutSubmenu"  data-toggle="collapse" aria-expanded="false">Cashout <span  class="fa arrow"></span></a>
+                        <ul  class="nav nav-third-level collapse" id="cashoutSubmenu">
+                            <li >
+                                <a routerLink="/cashout">BTC</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li >
+                        <a  routerLink="/login" (click)="logout()">Logout</a>
+                    </li>
+                </ul>
+                
+            </li>
+            <li  class="" >
+                <a href="#adminSubMenu" data-toggle="collapse" aria-expanded="false" class="mainpoint3"><i  class="fa fa-gear fa-fw"></i> Admin<span  class="fa arrow"></span></a>
+                <ul  class="nav nav-second-level collapse list-unstyled" id="adminSubMenu" >
+                    <li>
+                        <a   routerLink="/Adminblocks">Blocks</a>
+                    </li>
+                    <li  >
+                        <a  routerLink="/Adminrewards">Rewards</a>
+                    </li>
+                    <li>
+                        <a routerLink="/Admincustomers">Customers</a>
+                    </li>
+                     <li>
+                        <a routerLink="/Adminorders">Orders</a>
+                    </li>
+                    <li>
+                        <a href="#setupSubmenu" data-toggle="collapse" aria-expanded="false" >Setup <span  class="fa arrow"></span></a>
+                        <ul  class="nav nav-third-level collapse" id="setupSubmenu" >
+                            <li >
+                                <a  routerLink="/setupOrders">Add Order</a>
+                            </li>
+                            <li >
+                                <a  routerLink="/setupcustomer">Add Customer</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>  
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>

@@ -1,0 +1,16 @@
+.loginForm-bottom {
+    padding: 20px 0 0 0;
+}
+.row.formWidth {
+    width: 100%;
+    margin: auto;
+    max-width: 400px;
+}
+.btn-lg {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 3px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}

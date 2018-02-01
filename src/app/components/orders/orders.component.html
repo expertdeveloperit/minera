@@ -1,0 +1,102 @@
+<div class="container-fluid">
+    <ngx-loading [show]="loading" [config]=""></ngx-loading>
+        <div class="row ">
+            <div class="col-lg-12">
+                <h1 class="page-header">User Orders :</h1>
+            </div>  
+        <!-- /.col-lg-12 -->
+        </div>
+    <!-- /.row -->
+        <div class="row ">
+            <div class="row show-grid">
+                <div class="col-xs-6">Current {{coinName}} Price : </div>
+                <div class="col-xs-6">${{price}}</div>
+                <div class="col-xs-6">Total Hashpower ( TH/s ) : </div>
+                <div class="col-xs-6">{{totalhash}}</div>
+                <div class="col-xs-6">Total Contracts : </div>
+                <div class="col-xs-6">{{total_contaract}}</div><div class="col-xs-6">Break Even : </div>
+                <div class="col-xs-6">{{breakEven}}</div>
+            </div>
+        </div>
+
+        <!-- Data Table Information -->
+    <div class="row">
+        <div class="col-xs-12 no_padding">
+            <div class="panel panel-default">
+            <div class="panel-heading">Contract Information</div>
+            <div class="panel panel-default table-space">
+            <table id="orderTable" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Invoice Number </th>
+                            <th>Start Date</th>
+                            <th>Contract Length ( months ) </th>
+                            <th>cost</th>
+                            <th>Break Even ( Days )</th>
+                            <th>Payment Type </th>
+                            <th>HashPower </th>
+                            <th>Documentation </th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+
+                    </tfoot>
+                    <tbody>
+                        <tr *ngFor="let info of orderInfo; let last = last">
+                            <td>{{info.invoicenumber}}</td>
+                            <td>{{info.startdate}}</td>
+                            <td>{{info.contractlength}}</td>
+                            <td>{{info.cost}}</td>
+                            <td>{{getBreakEven(info)}}</td>
+                            <td>{{info.paymenttype}}</td>
+                            <td>{{info.hashpower}}</td>
+                            <td>...</td>
+                            <span *ngIf="last">{{refreshDatatable()}}</span>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- second Table -->
+    <div class="row secTable">
+        <div class="col-xs-12 no_padding ">
+            <div class="panel panel-default">
+            <div class="panel-heading">Estimated Earnings By Contract BTC / USD</div>
+            <div class="panel panel-default table-space">
+            <table id="orderTableSec" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Invoice Number </th>
+                            <th>Daily</th>
+                            <th>Monthly</th>
+                            <th>Yearly</th>
+                            <th>Estimated Contract Earnings BTC / USD </th>
+                            <th>Break Even 6 Months</th>
+                            <th>Break Even 1 Year</th>
+                            <th>Break Even 2 Years</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+
+                    </tfoot>
+                    <tbody>
+                        <tr *ngFor="let infoSec of orderInfo;let last = last">
+                            <td>{{infoSec.invoicenumber}}</td>
+                            <td>{{infoSec.estimatedday}} BTC / $ {{infoSec.estimatedday *price}}</td>
+                            <td>{{infoSec.estimatedmo}}BTC / $ {{infoSec.estimatedmo *price}}</td>
+                            <td>{{infoSec.estimatedyr}}BTC / $ {{infoSec.estimatedyr *price}}</td>
+                            <td>{{infoSec.estimatedyr * 2}}BTC / $ {{infoSec.estimatedyr *price * 2}}</td>
+                            <td>{{breakEvenMon(infoSec,'estimatedmo',6)}}</td>
+                            <td>{{breakEvenMon(infoSec,'estimatedyr',1)}}</td>
+                            <td>{{breakEvenMon(infoSec,'estimatedyr',2)}}</td>
+                            <span *ngIf="last">{{refreshDatatableSec()}}</span>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
